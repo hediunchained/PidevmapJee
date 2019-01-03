@@ -1,0 +1,146 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.sql.Timestamp;
+
+
+/**
+ * The persistent class for the Requests database table.
+ * 
+ */
+@Entity
+@Table(name="Requests")
+@NamedQuery(name="Request.findAll", query="SELECT r FROM Request r")
+public class Request implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="RequestID")
+	private int requestID;
+
+	@Column(name="ClientId")
+	private int clientId;
+
+	@Column(name="Deposit_Date")
+	private Timestamp deposit_Date;
+
+	@Column(name="Deposit_hour")
+	private Timestamp deposit_hour;
+
+	@Column(name="Education")
+	private Object education;
+
+	@Column(name="MandateFinish_date")
+	private Timestamp mandateFinish_date;
+
+	@Column(name="Mandatestart_date")
+	private Timestamp mandatestart_date;
+
+	@Column(name="Price")
+	private int price;
+
+	@Column(name="Requirements")
+	private Object requirements;
+
+	@Column(name="YearsExperience")
+	private int yearsExperience;
+
+	//bi-directional many-to-one association to Projet
+	@ManyToOne
+	@JoinColumn(name="Project_ProjetID")
+	private Projet projet;
+
+	public Request() {
+	}
+
+	public int getRequestID() {
+		return this.requestID;
+	}
+
+	public void setRequestID(int requestID) {
+		this.requestID = requestID;
+	}
+
+	public int getClientId() {
+		return this.clientId;
+	}
+
+	public void setClientId(int clientId) {
+		this.clientId = clientId;
+	}
+
+	public Timestamp getDeposit_Date() {
+		return this.deposit_Date;
+	}
+
+	public void setDeposit_Date(Timestamp deposit_Date) {
+		this.deposit_Date = deposit_Date;
+	}
+
+	public Timestamp getDeposit_hour() {
+		return this.deposit_hour;
+	}
+
+	public void setDeposit_hour(Timestamp deposit_hour) {
+		this.deposit_hour = deposit_hour;
+	}
+
+	public Object getEducation() {
+		return this.education;
+	}
+
+	public void setEducation(Object education) {
+		this.education = education;
+	}
+
+	public Timestamp getMandateFinish_date() {
+		return this.mandateFinish_date;
+	}
+
+	public void setMandateFinish_date(Timestamp mandateFinish_date) {
+		this.mandateFinish_date = mandateFinish_date;
+	}
+
+	public Timestamp getMandatestart_date() {
+		return this.mandatestart_date;
+	}
+
+	public void setMandatestart_date(Timestamp mandatestart_date) {
+		this.mandatestart_date = mandatestart_date;
+	}
+
+	public int getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public Object getRequirements() {
+		return this.requirements;
+	}
+
+	public void setRequirements(Object requirements) {
+		this.requirements = requirements;
+	}
+
+	public int getYearsExperience() {
+		return this.yearsExperience;
+	}
+
+	public void setYearsExperience(int yearsExperience) {
+		this.yearsExperience = yearsExperience;
+	}
+
+	public Projet getProjet() {
+		return this.projet;
+	}
+
+	public void setProjet(Projet projet) {
+		this.projet = projet;
+	}
+
+}

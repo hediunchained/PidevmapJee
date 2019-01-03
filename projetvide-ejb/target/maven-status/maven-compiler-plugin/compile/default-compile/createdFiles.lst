@@ -1,0 +1,14 @@
+model\TypeClient.class
+model\Projet.class
+services\clientSk.class
+model\Message.class
+model\Request.class
+services\ProjectConsum.class
+services\IconsumerRemote.class
+services\ProjectConsum$1.class
+model\CustomRole.class
+model\Application_Lettre.class
+model\MessageType.class
+model\TypeCategory.class
+model\CustomUserLogin.class
+model\User.class

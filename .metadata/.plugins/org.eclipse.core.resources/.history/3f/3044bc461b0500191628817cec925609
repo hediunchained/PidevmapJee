@@ -1,0 +1,389 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.List;
+
+
+/**
+ * The persistent class for the Users database table.
+ * 
+ */
+@Entity
+@Table(name="Users")
+@NamedQuery(name="User.findAll", query="SELECT u FROM User u")
+public class User implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="Id")
+	private int id;
+
+	@Column(name="AccessFailedCount")
+	private int accessFailedCount;
+
+	@Column(name="Category")
+	private Object category;
+
+	@Column(name="ClientId")
+	private int clientId;
+
+	@Column(name="ClientType")
+	private Object clientType;
+
+	@Column(name="ContractType")
+	private Object contractType;
+
+	@Column(name="Current_mandate")
+	private Object current_mandate;
+
+	@Column(name="Discriminator")
+	private Object discriminator;
+
+	@Column(name="Email")
+	private Object email;
+
+	@Column(name="EmailConfirmed")
+	private boolean emailConfirmed;
+
+	@Column(name="FirstName")
+	private Object firstName;
+
+	@Column(name="Holidays")
+	private Object holidays;
+
+	@Column(name="LastName")
+	private Object lastName;
+
+	@Column(name="LockoutEnabled")
+	private boolean lockoutEnabled;
+
+	@Column(name="LockoutEndDateUtc")
+	private Timestamp lockoutEndDateUtc;
+
+	private Object logoURL;
+
+	@Column(name="Mandate_History")
+	private Object mandate_History;
+
+	@Column(name="Notes")
+	private Object notes;
+
+	@Column(name="Password")
+	private Object password;
+
+	@Column(name="PasswordHash")
+	private Object passwordHash;
+
+	@Column(name="PhoneNumber")
+	private Object phoneNumber;
+
+	@Column(name="PhoneNumberConfirmed")
+	private boolean phoneNumberConfirmed;
+
+	@Column(name="PictureURL")
+	private Object pictureURL;
+
+	@Column(name="Rate")
+	private int rate;
+
+	@Column(name="Resume")
+	private Object resume;
+
+	@Column(name="SecurityStamp")
+	private Object securityStamp;
+
+	@Column(name="Seniority")
+	private Object seniority;
+
+	@Column(name="SkillSet")
+	private Object skillSet;
+
+	private Object state;
+
+	@Column(name="TwoFactorEnabled")
+	private boolean twoFactorEnabled;
+
+	@Column(name="UserName")
+	private Object userName;
+
+	//bi-directional many-to-one association to CustomUserLogin
+	@OneToMany(mappedBy="user")
+	private List<CustomUserLogin> customUserLogins;
+
+	public User() {
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getAccessFailedCount() {
+		return this.accessFailedCount;
+	}
+
+	public void setAccessFailedCount(int accessFailedCount) {
+		this.accessFailedCount = accessFailedCount;
+	}
+
+	public Object getCategory() {
+		return this.category;
+	}
+
+	public void setCategory(Object category) {
+		this.category = category;
+	}
+
+	public int getClientId() {
+		return this.clientId;
+	}
+
+	public void setClientId(int clientId) {
+		this.clientId = clientId;
+	}
+
+	public Object getClientType() {
+		return this.clientType;
+	}
+
+	public void setClientType(Object clientType) {
+		this.clientType = clientType;
+	}
+
+	public Object getContractType() {
+		return this.contractType;
+	}
+
+	public void setContractType(Object contractType) {
+		this.contractType = contractType;
+	}
+
+	public Object getCurrent_mandate() {
+		return this.current_mandate;
+	}
+
+	public void setCurrent_mandate(Object current_mandate) {
+		this.current_mandate = current_mandate;
+	}
+
+	public Object getDiscriminator() {
+		return this.discriminator;
+	}
+
+	public void setDiscriminator(Object discriminator) {
+		this.discriminator = discriminator;
+	}
+
+	public Object getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(Object email) {
+		this.email = email;
+	}
+
+	public boolean getEmailConfirmed() {
+		return this.emailConfirmed;
+	}
+
+	public void setEmailConfirmed(boolean emailConfirmed) {
+		this.emailConfirmed = emailConfirmed;
+	}
+
+	public Object getFirstName() {
+		return this.firstName;
+	}
+
+	public void setFirstName(Object firstName) {
+		this.firstName = firstName;
+	}
+
+	public Object getHolidays() {
+		return this.holidays;
+	}
+
+	public void setHolidays(Object holidays) {
+		this.holidays = holidays;
+	}
+
+	public Object getLastName() {
+		return this.lastName;
+	}
+
+	public void setLastName(Object lastName) {
+		this.lastName = lastName;
+	}
+
+	public boolean getLockoutEnabled() {
+		return this.lockoutEnabled;
+	}
+
+	public void setLockoutEnabled(boolean lockoutEnabled) {
+		this.lockoutEnabled = lockoutEnabled;
+	}
+
+	public Timestamp getLockoutEndDateUtc() {
+		return this.lockoutEndDateUtc;
+	}
+
+	public void setLockoutEndDateUtc(Timestamp lockoutEndDateUtc) {
+		this.lockoutEndDateUtc = lockoutEndDateUtc;
+	}
+
+	public Object getLogoURL() {
+		return this.logoURL;
+	}
+
+	public void setLogoURL(Object logoURL) {
+		this.logoURL = logoURL;
+	}
+
+	public Object getMandate_History() {
+		return this.mandate_History;
+	}
+
+	public void setMandate_History(Object mandate_History) {
+		this.mandate_History = mandate_History;
+	}
+
+	public Object getNotes() {
+		return this.notes;
+	}
+
+	public void setNotes(Object notes) {
+		this.notes = notes;
+	}
+
+	public Object getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(Object password) {
+		this.password = password;
+	}
+
+	public Object getPasswordHash() {
+		return this.passwordHash;
+	}
+
+	public void setPasswordHash(Object passwordHash) {
+		this.passwordHash = passwordHash;
+	}
+
+	public Object getPhoneNumber() {
+		return this.phoneNumber;
+	}
+
+	public void setPhoneNumber(Object phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public boolean getPhoneNumberConfirmed() {
+		return this.phoneNumberConfirmed;
+	}
+
+	public void setPhoneNumberConfirmed(boolean phoneNumberConfirmed) {
+		this.phoneNumberConfirmed = phoneNumberConfirmed;
+	}
+
+	public Object getPictureURL() {
+		return this.pictureURL;
+	}
+
+	public void setPictureURL(Object pictureURL) {
+		this.pictureURL = pictureURL;
+	}
+
+	public int getRate() {
+		return this.rate;
+	}
+
+	public void setRate(int rate) {
+		this.rate = rate;
+	}
+
+	public Object getResume() {
+		return this.resume;
+	}
+
+	public void setResume(Object resume) {
+		this.resume = resume;
+	}
+
+	public Object getSecurityStamp() {
+		return this.securityStamp;
+	}
+
+	public void setSecurityStamp(Object securityStamp) {
+		this.securityStamp = securityStamp;
+	}
+
+	public Object getSeniority() {
+		return this.seniority;
+	}
+
+	public void setSeniority(Object seniority) {
+		this.seniority = seniority;
+	}
+
+	public Object getSkillSet() {
+		return this.skillSet;
+	}
+
+	public void setSkillSet(Object skillSet) {
+		this.skillSet = skillSet;
+	}
+
+	public Object getState() {
+		return this.state;
+	}
+
+	public void setState(Object state) {
+		this.state = state;
+	}
+
+	public boolean getTwoFactorEnabled() {
+		return this.twoFactorEnabled;
+	}
+
+	public void setTwoFactorEnabled(boolean twoFactorEnabled) {
+		this.twoFactorEnabled = twoFactorEnabled;
+	}
+
+	public Object getUserName() {
+		return this.userName;
+	}
+
+	public void setUserName(Object userName) {
+		this.userName = userName;
+	}
+
+	public List<CustomUserLogin> getCustomUserLogins() {
+		return this.customUserLogins;
+	}
+
+	public void setCustomUserLogins(List<CustomUserLogin> customUserLogins) {
+		this.customUserLogins = customUserLogins;
+	}
+
+	public CustomUserLogin addCustomUserLogin(CustomUserLogin customUserLogin) {
+		getCustomUserLogins().add(customUserLogin);
+		customUserLogin.setUser(this);
+
+		return customUserLogin;
+	}
+
+	public CustomUserLogin removeCustomUserLogin(CustomUserLogin customUserLogin) {
+		getCustomUserLogins().remove(customUserLogin);
+		customUserLogin.setUser(null);
+
+		return customUserLogin;
+	}
+
+}

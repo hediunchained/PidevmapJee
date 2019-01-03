@@ -1,0 +1,31 @@
+package tn.esprit;
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import model.Projet;
+import services.IconsumerRemote;
+
+
+public class Client {
+
+	public static void main(String[] args {
+		
+		
+		List<Projet> ls = new ArrayList<>(Projet);
+		String jndiName = "Device-ear/Device-ejb/Employee!tn.esprit.device.service.EmployeeRemote";
+		Context context = new InitialContext();
+		IconsumerRemote service = (IconsumerRemote) context.lookup(jndiName);
+		ls=service.testConsume();
+	
+		
+
+	}
+
+}

@@ -1,0 +1,124 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	
+<form id="j_idt11" name="j_idt11" method="post" action="https://www.primefaces.org/california/empty.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt11" value="j_idt11" />
+	
+   <div id="layout-megamenu" class="ui-g-12 layout-megamenu layout-megamenu-dark ">
+            <div class="ui-g-12 ui-md-6 ui-lg-3 layout-megamenu-submenu">
+                <h4>System Reports</h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-th-list"></i>
+                            <span>System Logs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-server"></i>
+                            <span>Back-up Server</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-users"></i>
+                            <span>Conversions</span>
+                        </a>
+        
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-database"></i>
+                            <span>Storage Logs</span>
+                        </a>
+        
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-g-12 ui-md-6 ui-lg-3 layout-megamenu-submenu">
+                <h4>Finance Reports</h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-file-text-o"></i>
+                            <span>Annual Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-dollar"></i>
+                            <span>Revenue Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-user-o"></i>
+                            <span>HR Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-bar-chart"></i>
+                            <span>Finance Margin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-g-12 ui-md-6 ui-lg-3 layout-megamenu-submenu">
+                <h4>Settings</h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-envelope-o"></i>
+                            <span>E-mail Notifications</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-mobile"></i>
+                            <span>Sms Alerts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-globe"></i>
+                            <span>Site Tracking</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-g-12 ui-md-6 ui-lg-3 layout-megamenu-submenu">
+                <div class="content-img"><img id="j_idt11:j_idt13" src="javax.faces.resource/images/image-mega.pngb45c.png?ln=california-layout" alt="" />
+        
+                    <div class="img-megamenu">
+                        <span class="ui-g-12 img-header">California</span>
+                        <span class="ui-g-12 img-subheader">Application Template</span>
+                    </div><button id="j_idt11:j_idt15" name="j_idt11:j_idt15" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only alt-btn" type="button"><span class="ui-button-text ui-c">Buy Now</span></button><script id="j_idt11:j_idt15_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt11_j_idt15",{id:"j_idt11:j_idt15"});</script>
+                </div>
+            </div>
+        </div>
+        
+        <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="1627320563635386572:2468577148578690834" autocomplete="off" />
+</form>
+
+    <div class="layout-topbar"><a href="dashboard.html" class="logo"><img id="j_idt19" src="javax.faces.resource/images/logo.pngb45c.png?ln=california-layout" alt="" /></a>
+
+        <a id="menu-button" href="#">
+            <i class="fa fa-align-left"></i>
+        </a>
+
+        <a id="layout-megamenu-button" href="#">
+            <i class="fa fa-angle-down"></i>
+            <span class="mega-menu-title">Mega Menu</span>
+        </a>
+
+        <a id="right-sidebar-button" href="#">
+            <i class="fa fa-ellipsis-v"></i>
+        </a>
+    </div>
+
+</ui:composition>

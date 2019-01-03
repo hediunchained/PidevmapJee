@@ -1,0 +1,16 @@
+package services;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import model.Projet;
+import model.User;
+
+@Remote
+public interface IconsumerRemote {
+	public List<Projet> testConsume();
+	public int ajouterClient(User client);
+	public static void MyGETRequest();
+
+}

@@ -1,0 +1,18 @@
+package services;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import model.Projet;
+import model.User;
+
+@Remote
+public interface IconsumerRemote {
+	public List<Projet> testConsume();
+	public void ajouterClient(User user);
+	public List <Projet> MyGETRequest() throws IOException;
+	public List <Projet> sendGet() throws Exception ;
+
+}

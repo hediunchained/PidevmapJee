@@ -1,0 +1,219 @@
+package managedBeans;
+import java.io.IOException;
+import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import model.Client;
+import model.Projet;
+import model.TypeCategory;
+import model.User;
+import services.ProjectConsum;
+
+
+
+@ManagedBean(name="ProjectBean")
+@SessionScoped
+public class ProjectBean implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+
+	private String name;
+	
+	@Enumerated(EnumType.STRING)
+	private String clientType;
+	@Enumerated(EnumType.STRING)
+	private TypeCategory category;
+    private int indice;	
+    
+	public String getClientType() {
+		return clientType;
+	}
+
+	public void setClientType(String clientType) {
+		this.clientType = clientType;
+	}
+
+	public TypeCategory getCategory() {
+		return category;
+	}
+
+	public void setCategory(TypeCategory category) {
+		this.category = category;
+	}
+
+	public List<Client> getClient() {
+		return client;
+	}
+
+	public void setClient(List<Client> client) {
+		this.client = client;
+	}
+
+	private Projet projet;
+    private Client client = new Client();
+	public Client getClients() {
+		return clients;
+	}
+
+	public void setClients(Client clients) {
+		this.clients = clients;
+	}
+
+	private List<Client> clients;
+	private List<Projet>FiltredProjet ;
+	
+	
+	
+	@EJB
+	 ProjectConsum projectConsum;
+
+	public ProjectBean() {
+		super();
+		
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+   
+	public Projet getProjet() {
+		return projet;
+	}
+
+
+	public void setProjet(Projet projet) {
+		this.projet = projet;
+	}
+
+
+
+	 
+	
+	 public List<Projet> getRessourcesList() throws ParseException{ 
+//		 Projet s = new  Projet();
+//		 String testDate = "29-Apr-2010,13:00:14 PM";
+//		 DateFormat formatter = new SimpleDateFormat("d-MMM-yyyy,HH:mm:ss aaa");
+//		 Date date = formatter.parse(testDate);
+//		 System.out.println(date);
+//		 
+	    	clientSk sk = new clientSk(2);
+	        ArrayList<Projet> listeUsers= new  ArrayList<>();
+
+	    try {
+	                JSONArray json = clientSk.readJsonFromUrl("http://localhost:22033/Project/IndexAPI");
+	                for (int i = 0, count = json.length(); i < count; i++) {
+	                	Projet s = new  Projet();
+	                JSONObject obj = (JSONObject)json.get(i);
+	                
+	               s.setName(obj.get("Name").toString());
+	               s.setAdresse(obj.get("Adresse").toString());
+//	               s.setStart_Date((Date) obj.get("Start_Date"));
+//	               s.setEnd_Date((Date)obj.get("End_Date"));
+	               s.setTotal_Ressource_nb(obj.getInt("Total_Ressource_nb"));
+	               s.setLevio_ressource_nb(obj.getInt("Levio_ressource_nb"));
+	               s.setPictureURL(obj.get("PictureURL").toString());
+	               s.setProjetID(obj.getInt("ProjetID"));
+	               s.setClientId(obj.getInt("ClientId"));
+	               
+
+	                listeUsers.add(s);
+
+	             }
+	                System.out.println(listeUsers);
+
+	            } catch (IOException e) {
+	                e.printStackTrace();
+	            } catch (JSONException e) {
+	                e.printStackTrace();
+	            }
+		return (listeUsers);
+	    }	
+	 
+//		public void ajouterClient() {
+//			projectConsum.ajouterClient(new User(FirstName, UserName));
+//			System.out.println("ajouterrrrrrrrr");
+//		}
+	 
+		    public List<Client> ajouterClient=new ArrayList<>();
+		 
+			public void ajouterClient() 
+			{
+				projectConsum.ajouterClient(new Client(category));
+			}
+		
+	public List<Client> getAjouterClient() {
+				return ajouterClient;
+			}
+
+			public void setAjouterClient(List<Client> ajouterClient) {
+				this.ajouterClient = ajouterClient;
+			}
+
+	public List<Projet> getAllProjet() throws Exception{
+		System.out.println("test .........."+projectConsum.testConsume().toString());
+		return projectConsum.testConsume();
+	}
+	
+
+	
+	public List<Projet> getListe() {
+		return FiltredProjet;
+	}
+	
+//	   private void init() {
+//		FiltredProjet = projectConsum.testConsume();
+//		      if (FiltredProjet.isEmpty()) projet = new Projet();
+//		      else {
+//		         indice = FiltredProjet.size()-1;
+//		         projet = FiltredProjet.get(indice);
+//		      }
+//		   }
+	@PostConstruct
+	public void init() throws Exception{
+		FiltredProjet = projectConsum.testConsume();
+	}
+	
+	public void setFiltredProjet(List<Projet> filtredProjet) {
+		FiltredProjet = filtredProjet;
+	}
+
+	public List<Projet> getFiltredProjet() {
+		return FiltredProjet;
+	}
+	
+//    private HttpServletRequest getRequest() {
+//		FacesContext facesContext = FacesContext.getCurrentInstance();
+//		ExternalContext externalContext = facesContext.
+//                         getExternalContext();
+//		Object request = externalContext.getRequest();
+//		return request instanceof HttpServletRequest ? 
+//                        (HttpServletRequest) request : null;
+//	}
+}

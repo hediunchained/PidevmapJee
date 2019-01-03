@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects>
+  <project name="projetpi1-ejb"/>
+ </depends-on-projects>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/Daboussi Yousri/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
+  <path value="C:/Users/Daboussi Yousri/.m2/repository/javax/javaee-api/7.0/javaee-api-7.0.jar"/>
+  <path value="/projetpi1-web/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="projetpi1-web"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Daboussi Yousri/.m2/repository/org/primefaces/primefaces/5.3/primefaces-5.3.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/faces-config.xml" project="projetpi1-web"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/primefaces-p.taglib.xml" project="projetpi1-web"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/primefaces-pm.taglib.xml" project="projetpi1-web"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Daboussi Yousri/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="batch-verification"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="27" name="%0" offset="343" path="%1"/>
+   <linked-el length="34" name="%2" offset="695" path="%3"/>
+   <linked-el length="21" name="%2" offset="633" path="%3"/>
+   <linked-el length="21" name="%2" offset="557" path="%3"/>
+   <linked-el length="21" name="%2" offset="481" path="%3"/>
+   <linked-el length="20" name="%2" offset="406" path="%3"/>
+   <linked-el length="23" name="%4" offset="597" path="%5"/>
+   <linked-el length="26" name="%4" offset="901" path="%5"/>
+   <linked-el length="23" name="%4" offset="503" path="%6"/>
+   <linked-el length="22" name="%4" offset="839" path="%6"/>
+   <linked-el length="31" name="%4" offset="412" path="%6"/>
+   <linked-el length="29" name="%4" offset="453" path="%7"/>
+   <linked-el length="30" name="%4" offset="459" path="%5"/>
+   <linked-el length="28" name="%4" offset="968" path="%5"/>
+   <linked-el length="34" name="%4" offset="902" path="%6"/>
+   <linked-el length="34" name="%8" offset="695" path="%3"/>
+   <linked-el length="21" name="%8" offset="633" path="%3"/>
+   <linked-el length="21" name="%8" offset="557" path="%3"/>
+   <linked-el length="21" name="%8" offset="481" path="%3"/>
+   <linked-el length="20" name="%8" offset="406" path="%3"/>
+   <linked-el length="7" name="%9" offset="518" path="%1"/>
+   <linked-el length="27" name="%9" offset="343" path="%1"/>
+   <linked-el length="18" name="%10" offset="1316" path="%5"/>
+   <linked-el length="18" name="%10" offset="802" path="%7"/>
+   <linked-el length="20" name="%10" offset="1150" path="%5"/>
+   <linked-el length="20" name="%10" offset="636" path="%7"/>
+   <linked-el length="26" name="%11" offset="520" path="%5"/>
+   <linked-el length="23" name="%12" offset="597" path="%5"/>
+   <linked-el length="23" name="%12" offset="503" path="%6"/>
+   <linked-el length="31" name="%12" offset="412" path="%6"/>
+   <linked-el length="20" name="%12" offset="1150" path="%5"/>
+   <linked-el length="20" name="%12" offset="636" path="%7"/>
+   <linked-el length="26" name="%12" offset="901" path="%5"/>
+   <linked-el length="22" name="%12" offset="839" path="%6"/>
+   <linked-el length="18" name="%12" offset="1316" path="%5"/>
+   <linked-el length="18" name="%12" offset="802" path="%7"/>
+   <linked-el length="29" name="%12" offset="453" path="%7"/>
+   <linked-el length="30" name="%12" offset="459" path="%5"/>
+   <linked-el length="28" name="%12" offset="968" path="%5"/>
+   <linked-el length="34" name="%12" offset="902" path="%6"/>
+   <linked-el length="26" name="%13" offset="520" path="%5"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/projetpi1-web/src/main/java/beans/QuestionBean.java" value="%2"/>
+  <alias path="/projetpi1-web/src/main/webapp/login.xhtml" value="%6"/>
+  <alias path="/projetpi1-web/src/main/java/beans/messagebean.java" value="%4"/>
+  <alias path="questionBean" value="%8"/>
+  <alias
+   path="/projetpi1-web/src/main/webapp/pages/consommationDash.xhtml" value="%1"/>
+  <alias path="message.bestResource" value="%11"/>
+  <alias path="/projetpi1-web/src/main/webapp/pages/employesList.xhtml" value="%7"/>
+  <alias path="messagebean" value="%12"/>
+  <alias path="message" value="%13"/>
+  <alias path="/projetpi1-web/src/main/webapp/pages/MessageList.xhtml" value="%5"/>
+  <alias path="/projetpi1-web/src/main/java/beans/consommationBean.java" value="%0"/>
+  <alias path="/projetpi1-web/src/main/webapp/pages/AjoutQuestion.xhtml" value="%3"/>
+  <alias path="consommationBean" value="%9"/>
+  <alias path="/projetpi1-ejb/src/main/java/model/Message.java" value="%10"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

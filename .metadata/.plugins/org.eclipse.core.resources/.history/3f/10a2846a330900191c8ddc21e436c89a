@@ -1,0 +1,43 @@
+package tn.esprit.pidev.presentation.mbeans;
+
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+
+
+import tn.esprit.pidev.entities.typeCategorie;
+
+@ManagedBean
+@ApplicationScoped
+public class Data {
+
+	
+	
+	public TypeCategory[] getTypeCategories() {
+        return TypeCategory.values();
+    }
+	
+
+	@PostConstruct
+	public void init()
+	{
+		 categorie = typeCategorie.AGILE; 
+	}
+	
+	 private typeCategorie categorie ;
+
+	public typeCategorie getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(typeCategorie categorie) {
+		this.categorie = categorie;
+	} 
+	 
+	 
+	 
+	 
+	
+}

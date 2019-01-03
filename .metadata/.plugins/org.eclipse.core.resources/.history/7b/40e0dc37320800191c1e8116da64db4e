@@ -1,0 +1,42 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+	
+	
+	
+					<div class="card card-w-title">
+					<h1>Ajouter Une Competence</h1>
+
+					<p:messages showDetail="true" autoUpdate="true" closable="true" />
+					<h:form>
+						<p:panelGrid columns="2"
+							columnClasses="ui-grid-col-2,ui-grid-col-4,ui-grid-col-2,ui-grid-col-4"
+							layout="grid" styleClass="ui-panelgrid-blank form-group"
+							style="border:0px none; background-color:transparent;">
+
+                            <div>
+                                 <p:outputLabel for="type" value="Client" />
+                                 <h:selectOneMenu id="type" value="#{competenceBean.categorie}" required="true" requiredMessage="Please select a question">
+                                   <f:selectItem itemValue="#{null}" itemLabel="Selectionner"/>
+                                   <f:selectItems value="#{data.typeCategories}" itemValue="#{categorie}"/>
+                                     </h:selectOneMenu>
+                                 
+                               </div>
+                            <p:outputLabel for="competence" value="Libelle" />
+							<h:panelGroup styleClass="md-inputfield">
+								<p:inputText id="competence" value="#{competenceBean.libelle}" required="true" autocomplete="on" />
+								<label>libelle</label>
+								
+							</h:panelGroup>
+							<p:commandButton value="Ajouter" styleClass="red-button"
+								style="width:100px" process="@form" update="@form" ajax="true"
+								action="#{competenceBean.ajouterCompetence()}"  />
+				
+						</p:panelGrid>
+					</h:form>
+
+				</div>
+	
+</ui:composition>

@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+	
+	
+	
+					<div class="card card-w-title">
+					<h1>Ajouter Une Competence</h1>
+
+					<p:messages showDetail="true" autoUpdate="true" closable="true" />
+					<h:form>
+                            <p:outputLabel for="user" value="FirstName" />
+							<h:panelGroup styleClass="md-inputfield">
+								<p:inputText id="user" value="#{ProjectBean.firstName}" required="true" autocomplete="on" />
+								<label>Firstname</label>
+								
+							</h:panelGroup>
+							<p:commandButton value="Ajouter" styleClass="red-button"
+								style="width:100px" process="@form" update="@form" ajax="true"
+								action="#{competenceBean.ajouterCompetence()}"  />
+				
+						</p:panelGrid>
+					</h:form>
+
+				</div>
+	
+</ui:composition>

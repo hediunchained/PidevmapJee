@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:AjouterClient.xhtml"
+  PATH="AjouterClient.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:AjouterClient.xhtml:0" NAME="item"
+   PATH="AjouterClient.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="form:#{ProjectBean.addClient()}:Afficher.xhtml" NAME="output"
+    PATH="Afficher.xhtml" TARGET="rules:Afficher.xhtml"
+    TITLE="#{ProjectBean.addClient()}:form" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:Afficher.xhtml" PATH="Afficher.xhtml"
+  SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:p="http://primefaces.org/ui"
+	   template="/template/template.xhtml">
+	
+	
+	<ui:define name="content">
+					<div class="card card-w-title">
+					<h1>Ajouter Un Client</h1>
+
+					<p:messages showDetail="true" autoUpdate="true" closable="true" />
+					<h:form>
+				
+                            <p:outputLabel for="user" value="FirstName" />
+							<h:panelGroup styleClass="md-inputfield">
+								<p:inputText id="user" value="#{ProjectBean.firstName}" required="true" autocomplete="on" />
+								<label>Firstname</label>
+								
+							</h:panelGroup>
+							   <p:outputLabel for="user" value="UserName" />
+							<h:panelGroup styleClass="md-inputfield">
+								<p:inputText id="user" value="#{ProjectBean.userName}" required="true" autocomplete="on" />
+								<label>Firstname</label>
+								
+							</h:panelGroup>
+							<p:commandButton value="Ajouter" styleClass="red-button"
+								style="width:100px" process="@form" update="@form" ajax="true"
+								action="#{ProjectBean.ajouterClient()}"  />
+				
+					
+					
+					</h:form>
+
+				</div>
+	</ui:define>
+</html>

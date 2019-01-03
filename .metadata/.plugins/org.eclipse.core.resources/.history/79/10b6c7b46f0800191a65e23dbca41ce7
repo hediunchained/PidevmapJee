@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="projetvide-ear">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="projetvide-web.war" deploy-path="/" handle="module:/resource/projetvide-web/projetvide-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="projetvide-ejb.jar" deploy-path="/" handle="module:/resource/projetvide-ejb/projetvide-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-core/2.3.0/jackson-core-2.3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-databind.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-annotations.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.9.6/jackson-annotations-2.9.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-client.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/jersey/core/jersey-client/2.0/jersey-client-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-common.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/jersey/core/jersey-common/2.0/jersey-common-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.annotation-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="osgi-resource-locator.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.ws.rs-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/google/guava/guava/14.0.1/guava-14.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/hk2-api/2.1.88/hk2-api-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-utils.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/hk2-utils/2.1.88/hk2-utils-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.inject.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/external/javax.inject/2.1.88/javax.inject-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-locator.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/hk2-locator/2.1.88/hk2-locator-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="asm-all-repackaged.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/external/asm-all-repackaged/2.1.88/asm-all-repackaged-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cglib.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/external/cglib/2.1.88/cglib-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,20 @@
+package tn.esprit;
+
+public class Client {
+
+	public static void main(String[] args) {
+	
+
+		public static void main(String[] args) throws NamingException {
+			
+			List<Projet> ls = new ArrayList<>(Projet);
+			String jndiName = "Device-ear/Device-ejb/Employee!tn.esprit.device.service.EmployeeRemote";
+			Context context = new InitialContext();
+			EmployeeRemote service = (IconsumerRemote) context.lookup(jndiName);
+			ls=service.testConsume();
+		
+			}
+
+	}
+
+}

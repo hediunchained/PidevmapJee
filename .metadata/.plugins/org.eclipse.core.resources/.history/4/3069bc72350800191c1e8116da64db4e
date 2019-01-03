@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml"
+	xmlns:o="http://omnifaces.org/ui">
+       
+       
+				<h:form>
+						<p:dataTable var="projet"
+							value="#{ProjectBean.allProjet}"
+							selectionMode="single" reflow="true" selection="#{projet}"
+							rowKey="#{projet.name}" paginator="true" rows="5"
+							id="table">
+<!-- 							<f:facet name="header"> -->
+<!-- 								<p:selectOneMenu id="onemenu" value="#{data.categorie}"> -->
+<!-- 									<f:selectItems value="#{data.typeCategories}" var="a" -->
+<!-- 										itemValue="#{a}" itemLabel="#{a}"></f:selectItems> -->
+<!-- 									<p:ajax listener="#{competenceBean.filtres(data.categorie)}" update="table"></p:ajax> -->
+<!-- 								</p:selectOneMenu> -->
+<!-- 							</f:facet> -->
+							<p:column headerText="Libelle" sortBy="#{competence.libelle}">
+								<h:outputText value="#{competence.libelle}" />
+							</p:column>
+							<p:column headerText="Categorie" sortBy="#{competence.categorie}">
+								<h:outputText value="#{competence.categorie}" />
+							</p:column>
+
+						</p:dataTable>
+					</h:form>
+     
+	</ui:define>
+
+</ui:composition>

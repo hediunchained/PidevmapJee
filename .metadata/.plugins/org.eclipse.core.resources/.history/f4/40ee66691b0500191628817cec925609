@@ -1,0 +1,149 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.List;
+
+
+/**
+ * The persistent class for the Projets database table.
+ * 
+ */
+@Entity
+@Table(name="Projets")
+@NamedQuery(name="Projet.findAll", query="SELECT p FROM Projet p")
+public class Projet implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="ProjetID")
+	private int projetID;
+
+	@Column(name="Adresse")
+	private Object adresse;
+
+	@Column(name="ClientId")
+	private int clientId;
+
+	@Column(name="End_Date")
+	private Timestamp end_Date;
+
+	@Column(name="Levio_ressource_nb")
+	private int levio_ressource_nb;
+
+	@Column(name="Name")
+	private Object name;
+
+	@Column(name="PictureURL")
+	private Object pictureURL;
+
+	@Column(name="Start_Date")
+	private Timestamp start_Date;
+
+	@Column(name="Total_Ressource_nb")
+	private int total_Ressource_nb;
+
+	//bi-directional many-to-one association to Request
+	@OneToMany(mappedBy="projet")
+	private List<Request> requests;
+
+	public Projet() {
+	}
+
+	public int getProjetID() {
+		return this.projetID;
+	}
+
+	public void setProjetID(int projetID) {
+		this.projetID = projetID;
+	}
+
+	public Object getAdresse() {
+		return this.adresse;
+	}
+
+	public void setAdresse(Object adresse) {
+		this.adresse = adresse;
+	}
+
+	public int getClientId() {
+		return this.clientId;
+	}
+
+	public void setClientId(int clientId) {
+		this.clientId = clientId;
+	}
+
+	public Timestamp getEnd_Date() {
+		return this.end_Date;
+	}
+
+	public void setEnd_Date(Timestamp end_Date) {
+		this.end_Date = end_Date;
+	}
+
+	public int getLevio_ressource_nb() {
+		return this.levio_ressource_nb;
+	}
+
+	public void setLevio_ressource_nb(int levio_ressource_nb) {
+		this.levio_ressource_nb = levio_ressource_nb;
+	}
+
+	public Object getName() {
+		return this.name;
+	}
+
+	public void setName(Object name) {
+		this.name = name;
+	}
+
+	public Object getPictureURL() {
+		return this.pictureURL;
+	}
+
+	public void setPictureURL(Object pictureURL) {
+		this.pictureURL = pictureURL;
+	}
+
+	public Timestamp getStart_Date() {
+		return this.start_Date;
+	}
+
+	public void setStart_Date(Timestamp start_Date) {
+		this.start_Date = start_Date;
+	}
+
+	public int getTotal_Ressource_nb() {
+		return this.total_Ressource_nb;
+	}
+
+	public void setTotal_Ressource_nb(int total_Ressource_nb) {
+		this.total_Ressource_nb = total_Ressource_nb;
+	}
+
+	public List<Request> getRequests() {
+		return this.requests;
+	}
+
+	public void setRequests(List<Request> requests) {
+		this.requests = requests;
+	}
+
+	public Request addRequest(Request request) {
+		getRequests().add(request);
+		request.setProjet(this);
+
+		return request;
+	}
+
+	public Request removeRequest(Request request) {
+		getRequests().remove(request);
+		request.setProjet(null);
+
+		return request;
+	}
+
+}

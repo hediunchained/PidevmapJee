@@ -1,0 +1,32 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:o="http://omnifaces.org/ui">
+	
+    yousri:
+      #{test.hello()}
+      #{projectBean.filtredProjet.get().name}
+      <ui:define name="content">
+      	<div class="card card-w-title">
+					<h1>Projet</h1>
+					<p:messages showDetail="true" autoUpdate="true" closable="true" />
+					<h:form>
+						<p:dataTable var="Projet"
+							value="#{projectBean.filtredProjet}"
+							selectionMode="single" reflow="true" selection=#{Projet}
+							rowKey="#{Projet.name}" paginator="true" rows="5"
+							id="table">						
+
+                         	<p:menuitem value="Afficher toutes les Competences" outcome="/Projet/"
+							icon="ui-icon-insert-drive-file" >
+							<f:param name="i" value="1" />
+						</p:menuitem>
+						</p:dataTable>
+					</h:form>
+				</div>
+      
+	</ui:define>
+
+</ui:composition>

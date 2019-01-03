@@ -1,0 +1,26 @@
+package tn.esprit;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import model.Projet;
+import services.IconsumerRemote;
+
+
+
+public class SondageMain implements Serializable {
+
+	public static void main(String[] args) throws NamingException {
+		List<Projet> ls = new ArrayList<Projet>();
+		String jndiName = "projetvide-ear/projetvide-ejb/ProjectConsum!services.IconsumerRemote";
+		Context context = new InitialContext();
+		IconsumerRemote service = (IconsumerRemote) context.lookup(jndiName);
+		ls=service.testConsume();
+	
+		}
+
+}

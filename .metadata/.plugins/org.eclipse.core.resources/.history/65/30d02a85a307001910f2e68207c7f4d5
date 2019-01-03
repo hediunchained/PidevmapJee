@@ -1,0 +1,48 @@
+package managedBeans;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.m2i.formation.service.TemperatureService;
+
+public class ProjetServlet  extends HttpServlet {
+	
+	 public ProjetServlet() {
+	        super();
+	        // TODO Auto-generated constructor stub
+	    }
+
+		/**
+		 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+		 */
+		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			String maVue = "/celsiusinput.jsp";
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(maVue);  
+			dispatcher.forward(request,response);
+		}
+
+		/**
+		 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+		 */
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			
+			// On devrait récuperer la valeur saisie par l'utilisateur  
+			String valCelsius = request.getParameter("celsius");
+			
+			// Action: appliquons le calculateur. 
+			TemperatureService temperatureService = new TemperatureService(Double.valueOf(valCelsius));
+			
+			// Enregistrons l'objet dans la requête  
+			request.setAttribute("ts", temperatureService);
+			// Transfert à la vue
+			String maVue = "/fahrenheitoutput.jsp";  
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(maVue);
+			dispatcher.forward(request,response); 
+		}
+
+}

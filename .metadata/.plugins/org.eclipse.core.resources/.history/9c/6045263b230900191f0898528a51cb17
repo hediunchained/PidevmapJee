@@ -1,0 +1,39 @@
+package model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
+@Entity
+@Table(name="Client")
+@NamedQuery(name="Client.findAll", query="SELECT p FROM Projet p")
+public class Client implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="ClientId")
+	private int clientId;
+
+	@Column(name="Category")
+	private String category;
+
+	@Column(name="ClientType")
+	private String clientType;
+
+	@Column(name="PictureURL")
+	private String pictureURL;
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="projetvide-ear">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="projetvide-web.war" deploy-path="/" handle="module:/resource/projetvide-web/projetvide-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="projetvide-ejb.jar" deploy-path="/" handle="module:/resource/projetvide-ejb/projetvide-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsr311-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/json/json/20090211/json-20090211.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-core/2.3.0/jackson-core-2.3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-databind.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-annotations.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.9.6/jackson-annotations-2.9.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-client.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/sun/jersey/jersey-client/1.9.1/jersey-client-1.9.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-core.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/sun/jersey/jersey-core/1.9.1/jersey-core-1.9.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-client.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/jersey/core/jersey-client/2.0/jersey-client-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-common.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/jersey/core/jersey-common/2.0/jersey-common-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.annotation-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="osgi-resource-locator.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.ws.rs-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/google/guava/guava/14.0.1/guava-14.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/hk2-api/2.1.88/hk2-api-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-utils.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/hk2-utils/2.1.88/hk2-utils-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.inject.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/external/javax.inject/2.1.88/javax.inject-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-locator.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/hk2-locator/2.1.88/hk2-locator-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="asm-all-repackaged.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/external/asm-all-repackaged/2.1.88/asm-all-repackaged-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cglib.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/glassfish/hk2/external/cglib/2.1.88/cglib-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="async-http-client.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/asynchttpclient/async-http-client/2.3.0/async-http-client-2.3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="async-http-client-netty-utils.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/asynchttpclient/async-http-client-netty-utils/2.3.0/async-http-client-netty-utils-2.3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-buffer.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-buffer/4.1.21.Final/netty-buffer-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-codec-http.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-codec-http/4.1.21.Final/netty-codec-http-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-codec.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-codec/4.1.21.Final/netty-codec-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-handler.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-handler/4.1.21.Final/netty-handler-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-transport.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-transport/4.1.21.Final/netty-transport-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-codec-socks.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-codec-socks/4.1.21.Final/netty-codec-socks-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-handler-proxy.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-handler-proxy/4.1.21.Final/netty-handler-proxy-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-transport-native-epoll-linux-x86_64.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-transport-native-epoll/4.1.21.Final/netty-transport-native-epoll-4.1.21.Final-linux-x86_64.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-common.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-common/4.1.21.Final/netty-common-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-transport-native-unix-common.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-transport-native-unix-common/4.1.21.Final/netty-transport-native-unix-common-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-resolver-dns.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-resolver-dns/4.1.21.Final/netty-resolver-dns-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-resolver.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-resolver/4.1.21.Final/netty-resolver-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-codec-dns.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/io/netty/netty-codec-dns/4.1.21.Final/netty-codec-dns-4.1.21.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="reactive-streams.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="netty-reactive-streams.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/typesafe/netty/netty-reactive-streams/2.0.0/netty-reactive-streams-2.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="handy-uri-templates.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/damnhandy/handy-uri-templates/2.1.6/handy-uri-templates-2.1.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="joda-time.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

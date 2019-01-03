@@ -1,0 +1,83 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the Clients database table.
+ * 
+ */
+@Entity
+@Table(name="Clients")
+@NamedQuery(name="Client.findAll", query="SELECT c FROM Client c")
+public class Client implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="ClientId")
+	private int clientId;
+	
+
+	public Client(int clientId, String category, String clientType, String logoURL) {
+		super();
+		this.clientId = clientId;
+		this.category = category;
+		this.clientType = clientType;
+		this.logoURL = logoURL;
+	}
+	
+	public Client(String category, String clientType) {
+		
+		this.category = category;
+		this.clientType = clientType;
+		// TODO Auto-generated constructor stub
+	}
+	@Enumerated(EnumType.STRING)
+	@Column(name="Category")
+	private String category;
+
+	@Column(name="ClientType")
+	private String clientType;
+
+	private String logoURL;
+
+	public Client() {
+	}
+
+	
+
+	public int getClientId() {
+		return this.clientId;
+	}
+
+	public void setClientId(int clientId) {
+		this.clientId = clientId;
+	}
+
+	public String getCategory() {
+		return this.category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getClientType() {
+		return this.clientType;
+	}
+
+	public void setClientType(String clientType) {
+		this.clientType = clientType;
+	}
+
+	public String getLogoURL() {
+		return this.logoURL;
+	}
+
+	public void setLogoURL(String logoURL) {
+		this.logoURL = logoURL;
+	}
+
+}

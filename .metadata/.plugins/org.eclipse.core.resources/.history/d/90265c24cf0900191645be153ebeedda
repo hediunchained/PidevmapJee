@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	 xmlns:f="http://xmlns.jcp.org/jsf/core"
+     xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<ui:insert name="Title"></ui:insert>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<ui:insert name="Title"></ui:insert>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link type="text/css" rel="stylesheet" href="javax.faces.resource/theme.css9e5e.css?ln=primefaces-california-blue" />
+<link type="text/css" rel="stylesheet" href="javax.faces.resource/fa/font-awesome.css408e.css?ln=primefaces&amp;v=6.2" />
+<link type="text/css" rel="stylesheet" href="javax.faces.resource/components.css408e.css?ln=primefaces&amp;v=6.2" />
+<script type="text/javascript" src="javax.faces.resource/jquery/jquery.js408e.xhtml?ln=primefaces&amp;v=6.2"></script>
+<script type="text/javascript" src="javax.faces.resource/jquery/jquery-plugins.js408e.xhtml?ln=primefaces&amp;v=6.2">
+            	
+</script>
+<script type="text/javascript" src="javax.faces.resource/core.js408e.xhtml?ln=primefaces&amp;v=6.2">            	
+</script>
+ <script type="text/javascript" src="javax.faces.resource/components.js408e.xhtml?ln=primefaces&amp;v=6.2">
+ </script>
+<link type="text/css" rel="stylesheet" href="javax.faces.resource/css/nanoscroller.cssb45c.css?ln=california-layout" />
+ <link type="text/css" rel="stylesheet" href="javax.faces.resource/css/layout-blue.cssb45c.css?ln=california-layout" />
+ <script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.projectStage='Development';}
+  </script>
+        <title>Empty Page</title>
+        <script type="text/javascript" src="javax.faces.resource/js/nanoscroller.jsb45c.xhtml?ln=california-layout"></script>
+        <script type="text/javascript" src="javax.faces.resource/js/layout.jsb45c.xhtml?ln=california-layout"></script>
+
+</h:h
+</h:head>
+
+<h:body> 
+
+<ui:include src="/template/header.xhtml"></ui:include>
+<ui:insert name="content"></ui:insert>
+<ui:include src="/template/footer.xhtml"></ui:include>
+
+</h:body>
+</html>

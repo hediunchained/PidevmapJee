@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	<h:outputText value="Application d'Evaluation1"/>
+	<h:form>
+		<h:outputText value="Bienvenue #{projectBean.projet.name} #{projectBean.projet.projetID}!"/>
+		
+	</h:form>
+	<br/>
+
+	<br/>
+	<h1>
+		<ui:insert name="title"></ui:insert>
+	</h1>
+
+</ui:composition>

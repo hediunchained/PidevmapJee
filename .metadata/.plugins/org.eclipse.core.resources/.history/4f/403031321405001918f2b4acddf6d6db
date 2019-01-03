@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:p="http://primefaces.org/ui">
+       
+       
+       <h:head>
+	<ui:include src="/template/header.xhtml" />
+	<title>Bonjour Daboussi</title></h:head>
+	<h:body>
+	<h:form id="form">
+	<h:panelGrid columns="2">
+
+	<h:dataTable value="#{projectBean.allProjet}" var="projet"
+				border="1">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Name" />
+					</f:facet>
+					<h:outputText value="#{projet.name}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="adresse" />
+					</f:facet>
+					<h:outputText value="#{projet.adresse}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="start_Date" />
+					</f:facet>
+					<h:outputText value="#{projet.start_Date}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="end_Date" />
+					</f:facet>
+					<h:outputText value="#{projet.end_Date}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="total_Ressource_nb" />
+					</f:facet>
+					<h:outputText value="#{projet.total_Ressource_nb}" />
+				</h:column>
+					<h:column>
+					<f:facet name="header">
+						<h:outputText value="levio_ressource_nb" />
+					</f:facet>
+					<h:outputText value="#{projet.levio_ressource_nb}" />
+				</h:column>
+					<h:column>
+					<f:facet name="header">
+						<h:outputText value="clientId" />
+					</f:facet>
+					<h:outputText value="#{projet.clientId}" />
+				</h:column>
+					<h:column>
+					<f:facet name="header">
+						<h:outputText value="projetID" />
+					</f:facet>
+					<h:outputText value="#{projet.projetID}" />
+				</h:column>
+				</h:dataTable>
+	</h:panelGrid>
+	</h:form>
+	</h:body>
+	
+     
+     
+</html>

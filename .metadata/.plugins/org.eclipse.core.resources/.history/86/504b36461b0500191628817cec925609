@@ -1,0 +1,122 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.sql.Timestamp;
+
+
+/**
+ * The persistent class for the Messages database table.
+ * 
+ */
+@Entity
+@Table(name="Messages")
+@NamedQuery(name="Message.findAll", query="SELECT m FROM Message m")
+public class Message implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="MessageID")
+	private int messageID;
+
+	@Column(name="Content")
+	private Object content;
+
+	@Column(name="Date")
+	private Timestamp date;
+
+	@Column(name="MessageType")
+	private Object messageType;
+
+	@Column(name="Object")
+	private Object object;
+
+	@Column(name="Read")
+	private boolean read;
+
+	@Column(name="ReceiverId")
+	private int receiverId;
+
+	@Column(name="SenderId")
+	private int senderId;
+
+	@Column(name="Target")
+	private Object target;
+
+	public Message() {
+	}
+
+	public int getMessageID() {
+		return this.messageID;
+	}
+
+	public void setMessageID(int messageID) {
+		this.messageID = messageID;
+	}
+
+	public Object getContent() {
+		return this.content;
+	}
+
+	public void setContent(Object content) {
+		this.content = content;
+	}
+
+	public Timestamp getDate() {
+		return this.date;
+	}
+
+	public void setDate(Timestamp date) {
+		this.date = date;
+	}
+
+	public Object getMessageType() {
+		return this.messageType;
+	}
+
+	public void setMessageType(Object messageType) {
+		this.messageType = messageType;
+	}
+
+	public Object getObject() {
+		return this.object;
+	}
+
+	public void setObject(Object object) {
+		this.object = object;
+	}
+
+	public boolean getRead() {
+		return this.read;
+	}
+
+	public void setRead(boolean read) {
+		this.read = read;
+	}
+
+	public int getReceiverId() {
+		return this.receiverId;
+	}
+
+	public void setReceiverId(int receiverId) {
+		this.receiverId = receiverId;
+	}
+
+	public int getSenderId() {
+		return this.senderId;
+	}
+
+	public void setSenderId(int senderId) {
+		this.senderId = senderId;
+	}
+
+	public Object getTarget() {
+		return this.target;
+	}
+
+	public void setTarget(Object target) {
+		this.target = target;
+	}
+
+}

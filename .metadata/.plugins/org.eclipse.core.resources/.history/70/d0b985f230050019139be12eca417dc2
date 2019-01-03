@@ -1,0 +1,109 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the Organizational_chart database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Organizational_chart.findAll", query="SELECT o FROM Organizational_chart o")
+public class Organizational_chart implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="OrganizationalId")
+	private int organizationalId;
+
+	@Column(name="AccountManager")
+	private Object accountManager;
+
+	@Column(name="Assignment_Manager_Name")
+	private Object assignment_Manager_Name;
+
+	@Column(name="Client_Name")
+	private Object client_Name;
+
+	@Column(name="Leader_Name")
+	private Object leader_Name;
+
+	@Column(name="Level")
+	private Object level;
+
+	@Column(name="Program_Name")
+	private Object program_Name;
+
+	@Column(name="Project_Name")
+	private Object project_Name;
+
+	public Organizational_chart() {
+	}
+
+	public int getOrganizationalId() {
+		return this.organizationalId;
+	}
+
+	public void setOrganizationalId(int organizationalId) {
+		this.organizationalId = organizationalId;
+	}
+
+	public Object getAccountManager() {
+		return this.accountManager;
+	}
+
+	public void setAccountManager(Object accountManager) {
+		this.accountManager = accountManager;
+	}
+
+	public Object getAssignment_Manager_Name() {
+		return this.assignment_Manager_Name;
+	}
+
+	public void setAssignment_Manager_Name(Object assignment_Manager_Name) {
+		this.assignment_Manager_Name = assignment_Manager_Name;
+	}
+
+	public Object getClient_Name() {
+		return this.client_Name;
+	}
+
+	public void setClient_Name(Object client_Name) {
+		this.client_Name = client_Name;
+	}
+
+	public Object getLeader_Name() {
+		return this.leader_Name;
+	}
+
+	public void setLeader_Name(Object leader_Name) {
+		this.leader_Name = leader_Name;
+	}
+
+	public Object getLevel() {
+		return this.level;
+	}
+
+	public void setLevel(Object level) {
+		this.level = level;
+	}
+
+	public Object getProgram_Name() {
+		return this.program_Name;
+	}
+
+	public void setProgram_Name(Object program_Name) {
+		this.program_Name = program_Name;
+	}
+
+	public Object getProject_Name() {
+		return this.project_Name;
+	}
+
+	public void setProject_Name(Object project_Name) {
+		this.project_Name = project_Name;
+	}
+
+}

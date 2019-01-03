@@ -1,0 +1,76 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the Application_Lettre database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Application_Lettre.findAll", query="SELECT a FROM Application_Lettre a")
+public class Application_Lettre implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="ApplicationID")
+	private int applicationID;
+
+	@Column(name="Date")
+	private Object date;
+
+	@Column(name="Resume")
+	private Object resume;
+
+	@Column(name="Specialty")
+	private Object specialty;
+
+	@Column(name="State")
+	private Object state;
+
+	public Application_Lettre() {
+	}
+
+	public int getApplicationID() {
+		return this.applicationID;
+	}
+
+	public void setApplicationID(int applicationID) {
+		this.applicationID = applicationID;
+	}
+
+	public Object getDate() {
+		return this.date;
+	}
+
+	public void setDate(Object date) {
+		this.date = date;
+	}
+
+	public Object getResume() {
+		return this.resume;
+	}
+
+	public void setResume(Object resume) {
+		this.resume = resume;
+	}
+
+	public Object getSpecialty() {
+		return this.specialty;
+	}
+
+	public void setSpecialty(Object specialty) {
+		this.specialty = specialty;
+	}
+
+	public Object getState() {
+		return this.state;
+	}
+
+	public void setState(Object state) {
+		this.state = state;
+	}
+
+}
